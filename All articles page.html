@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LingoMedia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #633f66;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 300ms;
+        }
+
+        header:hover {
+            background-color: #88608b;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 12px;
+        }
+
+        header .logo h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            font-weight: 600;
+            font-size: 30px;
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #633f66;
+            border-radius: 5px;
+        }
+
+        .main-pg {
+            background-color: bisque;
+        }
+
+        .articles-main {
+            text-align: center;
+            background-color: bisque;
+        }
+
+        .articles-main-heading {
+            font-family: 'Montserrat';
+            font-style: italic;
+            font-size: 60px;
+            margin: 15px;
+            align-self: center;
+            margin-top: 25px;
+        }
+
+        .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.article-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-10px);
+}
+
+.article-card img {
+    width: 100%;
+    aspect-ratio: 8 / 5; /* Sets the aspect ratio to 3:4 */
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.article-card h2 {
+    font-size: 22px;
+    color: #333;
+    margin: 15px 0 10px;
+}
+
+.article-card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.article-card button {
+    padding: 10px 20px;
+    background-color: #633f66;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.article-card button:hover {
+    background-color: #88608b;
+}
+    
+    </style>
+</head>
+
+<body class="main-pg">
+
+    <header>
+        <div class="logo">
+            <img src="Images/LingoMedia.png" alt="Logo">
+            <h1>LingoMedia</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="file:///C:/Users/edikt/OneDrive/Documents/!LingoMedia/Website/LingoMedia%20Central%20Point/Home%20Page%20Light%20Theme.html#">⬅️Back</a></li>
+            </ul>
+        </nav>
+    </header>
+        
+        <section class="articles-main">
+            <h1 class="articles-main-heading">Articles</h1>
+            <div class="articles-grid">
+                <div class="article-card">
+                    <img src="Images/HowToQuicklyFixADHD-Article-mainphoto.png" alt="Article 1">
+                    <h2>Article Title 1</h2>
+                    <p>Subtitle or brief description of the article goes here.</p>
+                    <button>Read</button>
+                </div>
+                <div class="article-card">
+                    <img src="Images/NeverPutOffWorkAgain-Article-mainphoto.png" alt="Article 2">
+                    <h2>Article Title 2</h2>
+                    <p>Subtitle or brief description of the article goes here.</p>
+                    <button>Read</button>
+                </div>
+                <div class="article-card">
+                    <img src="Images/StillTryingToMemorizeWords-Article-mainphoto.png" alt="Article 3">
+                    <h2>Article Title 3</h2>
+                    <p>Subtitle or brief description of the article goes here.</p>
+                    <button>Read</button>
+                </div>
+                <!-- Add more article cards as needed -->
+            </div>
+        </section>
+</body>

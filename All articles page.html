@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LingoMedia</title>
     <style>
-        /* General Reset and Base Styling */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: bisque;
-            color: #333;
+        html {
+            scroll-behavior: smooth;
         }
 
-        /* Header Styling */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
         header {
             background-color: #633f66;
-            padding: 15px 20px;
+            padding: 20px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -30,141 +30,428 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s;
+            cursor: pointer;
+            transition: background-color 300ms;
         }
 
         header:hover {
             background-color: #88608b;
         }
 
-        .logo {
+        header .logo {
             display: flex;
             align-items: center;
-            cursor: pointer;
         }
 
-        .logo img {
-            height: 40px;
+        header .logo img {
+            height: 50px;
             margin-right: 10px;
-            border-radius: 8px;
+            border-radius: 12px;
         }
 
-        .logo h1 {
+        header .logo h1 {
             font-family: 'Montserrat', sans-serif;
             font-style: italic;
             font-weight: 600;
-            font-size: 24px;
+            font-size: 30px;
             color: white;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 15px;
+            gap: 20px;
+            align-items: center;
         }
 
         nav a {
-            color: white;
-            font-size: 16px;
             text-decoration: none;
-            padding: 8px;
-            transition: background-color 0.3s;
-            border-radius: 5px;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            transition: background-color 0.3s ease;
         }
 
         nav a:hover {
             background-color: #633f66;
+            border-radius: 5px;
         }
 
-        /* Main Section and Article Cards Styling */
-        .articles-main {
-            padding: 20px;
+        .hero {
+            height: 400px; /* Custom height */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: white;
+            color: white;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+            background: linear-gradient(90deg, rgb(231, 191, 236), whitesmoke);
+            
+        }
+
+        .hero h1, .hero h2 {
+            font-size: 90px;
+            margin-bottom: 20px;
+            animation: slideIn 1s ease-out;
+            font-family: 'Montserrat';
+            font-style: italic;
+            letter-spacing: 2px;
+            color: rgb(22, 21, 21);
             text-align: center;
         }
 
-        .articles-main h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-style: italic;
-            font-size: 40px;
-            margin: 20px 0;
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .articles-grid {
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .articles {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(90deg, rgb(231, 191, 236), whitesmoke);
+        }
+
+        .articles h2 {
+            font-size: 40px;
+            margin-bottom: 40px;
+            font-family: 'Montserrat';
+            font-style: italic;
+        }
+
+        .article-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 40px; /* Increased gap between cards */
+            margin: 0 auto;
+            max-width: 1200px; /* Limit the width of the grid */
         }
 
         .article-card {
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            text-align: center;
-            padding: 15px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 20px;
+            text-align: left;
         }
 
         .article-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
         .article-card img {
             width: 100%;
-            aspect-ratio: 8 / 5;
+            height: 200px;
             object-fit: cover;
-            border-radius: 8px 8px 0 0;
+            border-radius: 8px;
         }
 
-        .article-card h2 {
-            font-size: 18px;
-            margin: 15px 0 10px;
-            color: #333;
+        .article-card h3 {
+            font-size: 22px;
+            margin: 20px 0;
         }
 
         .article-card p {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 15px;
+            font-size: 16px;
+            margin-bottom: 20px;
         }
 
-        .article-card button {
-            padding: 8px 16px;
+        .article-img{
+            /* something */
+        }
+
+        .article-card .read-more {
+            display: inline-block;
+            padding: 10px 20px;
             background-color: #633f66;
             color: white;
-            border: none;
+            text-decoration: none;
+            font-size: 18px;
             border-radius: 5px;
-            cursor: pointer;
+            margin-top: 10px;
             transition: background-color 0.3s ease;
         }
 
-        .article-card button:hover {
+        .article-card .read-more:hover {
             background-color: #88608b;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .logo h1 {
-                font-size: 20px;
-            }
-
-            nav a {
-                font-size: 14px;
-            }
-
-            .articles-main h1 {
-                font-size: 30px;
-            }
+        .see-all-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #633f66;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
         }
+
+        .see-all-button:hover {
+            background-color: #88608b;
+        }
+
+        .about-us {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(90deg, rgb(231, 191, 236), whitesmoke);
+        }
+
+        .about-us h2 {
+            font-size: 45px;
+            margin-bottom: 20px;
+            font-family:'Montserrat';
+            font-style: italic;
+        }
+
+        .about-us p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .au1{
+            font-family: 'Montserrat';
+            font-weight: 475;
+            line-height: 30px;
+            font-size: 35px;
+            transform: translateY(15px);
+        }
+
+        .au2{
+            font-family: 'Montserrat';
+            font-weight: 475;
+            font-size: 35px;
+        }
+
+        /* Styling for the heading */
+    .socials-section h1 {
+        font-family: 'Montserrat';
+        font-style: italic;
+        font-size: 45px;
+        margin-bottom: 30px; /* Adds space between the heading and the cards */
+    }
+
+    /* Container for the socials section */
+    .socials-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px; /* Adjusted padding for better spacing */
+        text-align: center;
+        background: linear-gradient(90deg, rgb(231, 191, 236), whitesmoke);
+    }
+
+    /* Flex container for the social cards */
+    .socials-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center; /* Ensures cards are spaced evenly */
+    }
+
+    /* Styling for each social card */
+    .social-card {
+        width: 150px;
+        background-color: #f3f3f3;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s ease;
+    }
+
+    .social-card:hover {
+        transform: scale(1.05); /* Slight zoom on hover */
+    }
+
+    /* Styling for the logo images */
+    .logo-placeholder img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%; /* Makes the logo circular */
+        margin-bottom: 10px;
+    }
+
+    /* Styling for the social media title */
+    .social-card h3 {
+        font-size: 18px;
+        color: #333;
+        margin: 10px 0;
+    }
+
+    /* Styling for the "Join" button */
+    .join-button {
+        background-color: #633f66;
+        color: #fff;
+        padding: 8px 12px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 14px;
+    }
+
+    .join-button:hover {
+        background-color: #88608b; /* Darker shade on hover */
+    }
+                               
+            
+        .contact {
+            padding: 60px 20px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 45px;
+            margin-bottom: 20px;
+            font-family: 'Montserrat';
+            font-style: italic;
+        }
+
+        .contact p {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .contact a {
+            font-size: 22px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact a:hover {
+            color: #88608b;
+        }
+
+        .contact-section {
+            background-color: #444;
+            padding: 40px 20px;
+        }
+
+        .contact-section p {
+            font-size: 20px;
+            color: white;
+        }
+
+        .contact-section a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-section a:hover {
+            color: #88608b;
+        }
+
+        .arr-footer {
+            background-color: #333;
+            padding: 2px;
+            color: white;
+            text-align: center;
+        }
+
+        /* Mobile responsiveness */
+@media (max-width: 768px) {
+    /* Change the article grid to 1 column on mobile */
+    .article-grid {
+        grid-template-columns: 1fr; /* Switch to 1 column */
+    }
+
+    /* Hero text resizing */
+    .hero h1, .hero h2 {
+        font-size: 50px; /* Smaller font size */
+    }
+
+    /* Adjust articles section heading size */
+    .articles h2 {
+        font-size: 30px; /* Smaller heading for mobile */
+    }
+
+    /* Adjust article card image height */
+    .article-card img {
+        height: 150px; /* Smaller image size */
+    }
+
+    /* Ensure the social cards stack vertically on mobile */
+    .socials-container {
+        flex-direction: column; /* Stack the social cards */
+        gap: 20px;
+        align-items: center; /* Center the social cards */
+    }
+
+    /* Adjust social card size and layout */
+    .social-card {
+        width: 100%; /* Make social cards full width */
+        text-align: center; /* Center text */
+    }
+
+    /* Adjust About Us text */
+    .about-us h2 {
+        font-size: 35px; /* Smaller About Us heading */
+    }
+
+    .au1, .au2 {
+        font-size: 20px; /* Smaller text for mobile */
+        line-height: 28px;
+    }
+
+    /* Contact section styling */
+    .contact h2 {
+        font-size: 35px; /* Smaller Contact heading */
+    }
+
+    .contact p {
+        font-size: 18px; /* Smaller text */
+    }
+
+    .contact a {
+        font-size: 18px; /* Adjust font size for links */
+    }
+
+    .contact-section p {
+        font-size: 18px; /* Adjust contact section text */
+    }
+
+    /* Footer text resizing */
+    .arr-footer p {
+        font-size: 16px; /* Smaller footer text */
+    }
+}
+
     </style>
 </head>
 
 <body>
 
-    <!-- Header Section -->
     <header>
         <div class="logo">
             <img src="Images/LingoMedia.png" alt="Logo">
@@ -172,35 +459,101 @@
         </div>
         <nav>
             <ul>
-                <li><a href="Home Page Light Theme.html">⬅️Back</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#socials">Our Socials</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+
+            
+
         </nav>
     </header>
 
-    <!-- Main Articles Section -->
-    <section class="articles-main">
-        <h1>Articles</h1>
-        <div class="articles-grid">
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to</h1>
+            <h2>LingoMedia!</h2>
+        </div>
+    </section>
+
+    <section id="articles" class="articles">
+        <h2>Our Best Articles</h2>
+        <div class="article-grid">
             <div class="article-card">
-                <img src="Images/HowToQuicklyFixADHD-Article-mainphoto.png" alt="Article 1">
-                <h2>Article Title 1</h2>
-                <p>Subtitle or brief description of the article goes here.</p>
-                <button>Read</button>
+                <img src="Images/HowToQuicklyFixADHD-Article-mainphoto.png" alt="Article Image" class="article-img">
+                <h3>How to Quickly Fix ADHD</h3>
+                <p>As soon as you understand how it works, it's no longer a problem.</p>
+                <a href="#" class="read-more">Read More</a>
             </div>
             <div class="article-card">
-                <img src="Images/NeverPutOffWorkAgain-Article-mainphoto.png" alt="Article 2">
-                <h2>Article Title 2</h2>
-                <p>Subtitle or brief description of the article goes here.</p>
-                <button>Read</button>
+                <img src="Images/NeverPutOffWorkAgain-Article-mainphoto.png" alt="Article Image" class="article-img">
+                <h3>Never Put Work Off Again</h3>
+                <p>One simple rule that will get you to work right away!</p>
+                <a href="#" class="read-more">Read More</a>
             </div>
             <div class="article-card">
-                <img src="Images/StillTryingToMemorizeWords-Article-mainphoto.png" alt="Article 3">
-                <h2>Article Title 3</h2>
-                <p>Subtitle or brief description of the article goes here.</p>
-                <button>Read</button>
+                <img src="Images/StillTryingToMemorizeWords-Article-mainphoto.png" alt="Article Image" class="article-img">
+                <h3>Still Trying to Memorize Words?</h3>
+                <p>How about a better and simpler way?</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+        <a href="All articles page.html" target="_blank" class="see-all-button">See All Articles</a>
+    </section>
+
+    <section id="socials" class="socials-section">
+        <h1>Our Socials</h1>
+        <div class="socials-container">
+            <div class="social-card">
+                <div class="logo-placeholder">
+                    <img src="Images/Instagram Logo.png" alt="Instagram Logo">
+                </div>
+                <h3>Instagram</h3>
+                <a href="https://www.instagram.com/lingomedias/" target="_blank">
+                    <button class="join-button">Join</button>
+                </a>
+            </div>
+    
+            <div class="social-card">
+                <div class="logo-placeholder">
+                    <img src="Images/X Logo.png" alt="Twitter Logo">
+                </div>
+                <h3>Twitter (X)</h3>
+                <a href="https://x.com/LingoMedias" target="_blank">
+                    <button class="join-button">Join</button>
+                </a>
+            </div>
+    
+            <div class="social-card">
+                <div class="logo-placeholder">
+                    <img src="Images/YouTube Logo.png" alt="YouTube Logo">
+                </div>
+                <h3>YouTube</h3>
+                <a href="https://www.youtube.com/@LingoMedia-bb" target="_blank">
+                    <button class="join-button">Join</button>
+                </a>
             </div>
         </div>
     </section>
+    
+    
+    <section id="about" class="about-us">
+        <h2>About Us</h2>
+        <p class="au1">Here at LingoMedia, we are on a mission to break down communitcation barriers and help you succeed not just in language learning, but in every shpere of your life.</p>
+        <p class="au2">We believe, that you are the one that is going to make the world better. And we are here to make you better.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Need support? Feel free to reach out to us!</p>
+        <a href="mailto:lingomedias@gmail.com">lingomedias@gmail.com</a>
+    </section>
+
+    <footer class="arr-footer">
+        <p>© 2024 LingoMedia. All rights reserved.</p>
+    </footer>
 
 </body>
 

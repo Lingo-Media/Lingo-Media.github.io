@@ -379,6 +379,74 @@
             text-align: center;
         }
 
+        /* Mobile responsiveness */
+@media (max-width: 768px) {
+    /* Change the article grid to 1 column on mobile */
+    .article-grid {
+        grid-template-columns: 1fr; /* Switch to 1 column */
+    }
+
+    /* Hero text resizing */
+    .hero h1, .hero h2 {
+        font-size: 50px; /* Smaller font size */
+    }
+
+    /* Adjust articles section heading size */
+    .articles h2 {
+        font-size: 30px; /* Smaller heading for mobile */
+    }
+
+    /* Adjust article card image height */
+    .article-card img {
+        height: 150px; /* Smaller image size */
+    }
+
+    /* Ensure the social cards stack vertically on mobile */
+    .socials-container {
+        flex-direction: column; /* Stack the social cards */
+        gap: 20px;
+        align-items: center; /* Center the social cards */
+    }
+
+    /* Adjust social card size and layout */
+    .social-card {
+        width: 100%; /* Make social cards full width */
+        text-align: center; /* Center text */
+    }
+
+    /* Adjust About Us text */
+    .about-us h2 {
+        font-size: 35px; /* Smaller About Us heading */
+    }
+
+    .au1, .au2 {
+        font-size: 20px; /* Smaller text for mobile */
+        line-height: 28px;
+    }
+
+    /* Contact section styling */
+    .contact h2 {
+        font-size: 35px; /* Smaller Contact heading */
+    }
+
+    .contact p {
+        font-size: 18px; /* Smaller text */
+    }
+
+    .contact a {
+        font-size: 18px; /* Adjust font size for links */
+    }
+
+    .contact-section p {
+        font-size: 18px; /* Adjust contact section text */
+    }
+
+    /* Footer text resizing */
+    .arr-footer p {
+        font-size: 16px; /* Smaller footer text */
+    }
+}
+
     </style>
 </head>
 

@@ -379,43 +379,6 @@
             text-align: center;
         }
 
-        /* Hamburger Menu */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.menu-toggle span {
-    height: 3px;
-    width: 25px;
-    background-color: white;
-    margin: 4px 0;
-    transition: 0.4s;
-}
-
-/* Responsive styling */
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #633f66;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        z-index: 999;
-    }
-
-    nav ul.show {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-}
-
     </style>
 </head>
 
@@ -427,19 +390,16 @@
             <h1>LingoMedia</h1>
         </div>
         <nav>
-            <!-- Hamburger menu icon for mobile -->
-<div class="menu-toggle" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
-<ul id="menu">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#articles">Articles</a></li>
-    <li><a href="#socials">Our Socials</a></li>
-    <li><a href="#about">About Us</a></li>
-    <li><a href="#contact">Contact</a></li>
-</ul>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#socials">Our Socials</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            
+
         </nav>
     </header>
 
@@ -526,15 +486,6 @@
     <footer class="arr-footer">
         <p>© 2024 LingoMedia. All rights reserved.</p>
     </footer>
-
-    <script>
-    
-    function toggleMenu() {
-        document.getElementById('menu').classList.toggle('show');
-    }
-
-    </script> 
-    
 
 </body>
 

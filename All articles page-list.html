@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LingoMedia</title>
+    <style>
+        /* General Reset and Base Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: bisque;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #633f66;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        header:hover {
+            background-color: #88608b;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 8px;
+        }
+
+        .logo h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            font-weight: 600;
+            font-size: 24px;
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+            padding: 8px;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #633f66;
+        }
+
+        .AL-heading {
+            font-style: italic;
+            font-family: 'Montserrat';
+            font-size: 45px;
+        }
+
+        .ALH-section {
+            text-align: center;
+        }
+
+        .article-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.article-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.article-image {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.article-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-content {
+  flex-grow: 1;
+}
+
+.article-title {
+  font-size: 18px;
+  margin: 0;
+  color: #333;
+}
+
+.article-description {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.read-more {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+    </style>
+
+<header>
+    <div class="logo">
+        <img src="Images/LingoMedia.png" alt="Logo">
+        <h1>LingoMedia</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="Home Page Light Theme.html">⬅️Back</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="ALH-section">
+    <h1 class="AL-heading">
+        Articles
+    </h1>
+</section>
+
+
+<div class="article-list">
+    <div class="article-item">
+      <div class="article-image">
+        <img src="image1.jpg" alt="Article Image">
+      </div>
+      <div class="article-content">
+        <h3 class="article-title">Article Title 1</h3>
+        <p class="article-description">A brief description of the article. It should be short and concise.</p>
+        <a href="article-link.html" class="read-more">Read more</a>
+      </div>
+    </div>
+  
+    <div class="article-item">
+      <div class="article-image">
+        <img src="image2.jpg" alt="Article Image">
+      </div>
+      <div class="article-content">
+        <h3 class="article-title">Article Title 2</h3>
+        <p class="article-description">A brief description of the article. It should be short and concise.</p>
+        <a href="article-link.html" class="read-more">Read more</a>
+      </div>
+    </div>
+  
+    <!-- Repeat for more articles -->
+  </div>
+  

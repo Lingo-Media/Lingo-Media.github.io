@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LingoMedia</title>
+    <style>
+        /* General Reset and Base Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: bisque;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #633f66;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        header:hover {
+            background-color: #88608b;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 8px;
+        }
+
+        .logo h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            font-weight: 600;
+            font-size: 24px;
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+            padding: 8px;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #633f66;
+        }
+
+        /* Main Section and Article Cards Styling */
+        .articles-main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .articles-main h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            font-size: 40px;
+            margin: 20px 0;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .article-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .article-card img {
+            width: 100%;
+            aspect-ratio: 8 / 5;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .article-card h2 {
+            font-size: 18px;
+            margin: 15px 0 10px;
+            color: #333;
+        }
+
+        .article-card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .article-card button {
+            padding: 8px 16px;
+            background-color: #633f66;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .article-card button:hover {
+            background-color: #88608b;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .logo h1 {
+                font-size: 20px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .articles-main h1 {
+                font-size: 45px;
+            }
+        }
+
+        .displist {
+            justify-self: center;
+            text-align: center;
+            padding: 5px 0;
+            font-family: 'Montserrat';
+        }
+
+        .arr-footer {
+            background-color: bisque;
+            padding: 2px;
+            color: white;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="Images/LingoMedia.png" alt="Logo">
+            <h1>LingoMedia</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="aapl.html" class="displist">Display As List</a></li>
+                <li><a href="homepgl.html">⬅️Back</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Articles Section -->
+    <section class="articles-main">
+        <h1>Articles</h1>
+        <div class="articles-grid">
+            <div class="article-card">
+                <img src="Images/HowToQuicklyFixADHD-Article-mainphoto.png" alt="Article 1">
+                <h2>Article Title 1</h2>
+                <p>Subtitle or brief description of the article goes here.</p>
+                <button>Read</button>
+            </div>
+            <div class="article-card">
+                <img src="Images/NeverPutOffWorkAgain-Article-mainphoto.png" alt="Article 2">
+                <h2>Article Title 2</h2>
+                <p>Subtitle or brief description of the article goes here.</p>
+                <button>Read</button>
+            </div>
+            <div class="article-card">
+                <img src="Images/StillTryingToMemorizeWords-Article-mainphoto.png" alt="Article 3">
+                <h2>Article Title 3</h2>
+                <p>Subtitle or brief description of the article goes here.</p>
+                <button>Read</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="arr-footer">
+        <p>© 2024 LingoMedia. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LingoMedia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #633f66;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 300ms;
+        }
+
+        header:hover {
+            background-color: #88608b;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 12px;
+        }
+
+        header .logo h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            font-weight: 600;
+            font-size: 30px;
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #633f66;
+            border-radius: 5px;
+        }
+
+        .as-heading {
+            padding: 5px;
+            background-color: bisque;
+        }
+
+        .as-main-h {
+            padding: 10px 10px;
+            text-align: center;
+            font-family: 'Montserrat';
+            font-size: 45px;
+            font-style: italic;
+            font-weight: 900;
+            background-color: bisque;
+        }
+        
+        .as-sub {
+            padding: 10px 10px;
+            text-align: center;
+            font-family: 'Montserrat';
+            font-size: 30px;
+            font-weight: 550;
+            background-color: bisque;
+        }
+
+        .art-txt {
+            font-size: 25px;
+            font-family: 'Montserrat';
+            text-align: left;
+            padding: 10px;
+            background-color: bisque;
+        }
+
+        .arr-footer {
+            background-color: bisque;
+            padding: 2px;
+            color: white;
+            text-align: center;
+        }
+
+    </style>
+
+
+<body class="main-pg">
+
+    <header>
+        <div class="logo">
+            <img src="Images/LingoMedia.png" alt="Logo">
+            <h1>LingoMedia</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="homepgl.html">⬅️Back</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="as-heading">
+        <img src="">
+        <h1 class="as-main-h">Heading of Article Here</h1>
+        <p class="as-sub">Subheading here</p>
+    </section>
+
+    <section class="art-txt">
+        article text here
+    </section>
+
+    <footer class="arr-footer">
+        <p>© 2024 LingoMedia. All rights reserved.</p>
+    </footer>
+        
+</body>

@@ -17,6 +17,14 @@
             font-family: Arial, sans-serif;
             background-color: bisque;
             color: #333;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .page-container {
+            flex: 1; /* Allows the main content to take up remaining space */
         }
 
         /* Header Styling */
@@ -88,121 +96,122 @@
         }
 
         .article-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-}
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+        }
 
-.article-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0;
-}
+        .article-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
 
-.article-image {
-  width: 60px;
-  height: 60px;
-  overflow: hidden;
-}
+        .article-image {
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+        }
 
-.article-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-.article-content {
-  flex-grow: 1;
-}
+        .article-content {
+            flex-grow: 1;
+        }
 
-.article-title {
-  font-size: 18px;
-  margin: 0;
-  color: #333;
-}
+        .article-title {
+            font-size: 18px;
+            margin: 0;
+            color: #333;
+        }
 
-.article-description {
-  font-size: 14px;
-  color: #555;
-  margin: 5px 0;
-}
+        .article-description {
+            font-size: 14px;
+            color: #555;
+            margin: 5px 0;
+        }
 
-.read-more {
-  font-size: 14px;
-  color: #007bff;
-  text-decoration: none;
-}
+        .read-more {
+            font-size: 14px;
+            color: #007bff;
+            text-decoration: none;
+        }
 
-.read-more:hover {
-  text-decoration: underline;
-}
+        .read-more:hover {
+            text-decoration: underline;
+        }
 
-            .dispcard {
+        .dispcard {
             justify-self: center;
             text-align: center;
             padding: 5px 0;
             font-family: 'Montserrat';
-           }
-
-           .arr-footer {
-            background-color: bisque;
-            padding: 2px;
-            color: black;
-            text-align: center;
         }
 
+        .arr-footer {
+            background-color: bisque;
+            padding: 10px;
+            color: black;
+            text-align: center;
+            margin-top: auto; /* Ensures the footer moves to the bottom */
+        }
     </style>
+</head>
 
-<header>
-    <div class="logo">
-        <img src="Images/LingoMedia.png" alt="Logo">
-        <h1>LingoMedia</h1>
+<body>
+    <div class="page-container">
+        <header>
+            <div class="logo">
+                <img src="Images/LingoMedia.png" alt="Logo">
+                <h1>LingoMedia</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="aapc.html" class="dispcard">Display As Cards</a></li>
+                    <li><a href="homepgl.html">⬅️Back</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="ALH-section">
+            <h1 class="AL-heading">Articles</h1>
+        </section>
+
+        <div class="article-list">
+            <div class="article-item">
+                <div class="article-image">
+                    <img src="image1.jpg" alt="Article Image">
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title">Article Title 1</h3>
+                    <p class="article-description">A brief description of the article. It should be short and concise.</p>
+                    <a href="article-link.html" class="read-more">Read more</a>
+                </div>
+            </div>
+
+            <div class="article-item">
+                <div class="article-image">
+                    <img src="image2.jpg" alt="Article Image">
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title">Article Title 2</h3>
+                    <p class="article-description">A brief description of the article. It should be short and concise.</p>
+                    <a href="article-link.html" class="read-more">Read more</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <nav>
-        <ul>
-            <li><a href="aapc.html" class="dispcard">Display As Cards</a></li>
-            <li><a href="homepgl.html">⬅️Back</a></li>
-        </ul>
-    </nav>
-</header>
 
-<section class="ALH-section">
-    <h1 class="AL-heading">
-        Articles
-    </h1>
-</section>
+    <footer class="arr-footer">
+        <p>© 2024 LingoMedia. All rights reserved.</p>
+    </footer>
+</body>
 
-
-<div class="article-list">
-    <div class="article-item">
-      <div class="article-image">
-        <img src="image1.jpg" alt="Article Image">
-      </div>
-      <div class="article-content">
-        <h3 class="article-title">Article Title 1</h3>
-        <p class="article-description">A brief description of the article. It should be short and concise.</p>
-        <a href="article-link.html" class="read-more">Read more</a>
-      </div>
-    </div>
-  
-    <div class="article-item">
-      <div class="article-image">
-        <img src="image2.jpg" alt="Article Image">
-      </div>
-      <div class="article-content">
-        <h3 class="article-title">Article Title 2</h3>
-        <p class="article-description">A brief description of the article. It should be short and concise.</p>
-        <a href="article-link.html" class="read-more">Read more</a>
-      </div>
-    </div>
-  
-    <!-- Repeat for more articles -->
-  </div>
-
-  <footer class="arr-footer">
-    <p>© 2024 LingoMedia. All rights reserved.</p>
-</footer>
-  
+</html>
